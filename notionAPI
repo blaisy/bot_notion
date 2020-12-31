@@ -1,0 +1,9 @@
+#bot_notion.py                                             
+
+from notion.client  import  NotionClient
+from notion.block import TodoBlock
+client = NotionClient(token_v2 = "")
+
+page = client.get_block("")
+
+GetToDo = page.children.add_new(TodoBlock, title="Something to get done")
